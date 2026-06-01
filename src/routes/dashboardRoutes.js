@@ -9,8 +9,8 @@ const {
 const { protect, authorize } = require('../middleware/authMiddleware');
 
 router.get('/stats', protect, authorize('admin', 'manager'), getDashboardStats);
-router.get('/sales-chart', protect, getSalesChart);
-router.get('/top-products', protect, getTopProducts);
-router.get('/recent-orders', protect, getRecentOrders);
+router.get('/sales-chart', getSalesChart);
+router.get('/top-products', getTopProducts);
+router.get('/recent-orders', getRecentOrders);
 
 module.exports = router;
